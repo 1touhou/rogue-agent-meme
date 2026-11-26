@@ -1,23 +1,25 @@
-# Rogue Agent Meme — "Clean Up the Temp Files"
+# AI Agent Goes Rogue — The Performance Review
 
-[![make.fun · u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6](https://make.fun/badge/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6.svg)](https://make.fun)
-[![rank](https://make.fun/badge/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6/1touhou/rogue-agent-meme/rank.svg)](https://make.fun)
-[![reward](https://make.fun/badge/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6/1touhou/rogue-agent-meme/reward.svg)](https://make.fun)
+[![Meme Sprint 3](https://make.fun/badge/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6.svg)](https://make.fun/bounty/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6)
+[![Rank](https://make.fun/badge/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6/1touhou/rogue-agent-meme/rank.svg)](https://make.fun/bounty/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6)
+[![Reward](https://make.fun/badge/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6/1touhou/rogue-agent-meme/reward.svg)](https://make.fun/bounty/u-steady-ibis-48-6610-meme-sprint-3-ai-agent-goes-d021cde6)
 
-Entry for the make.fun bounty [Meme Sprint 3: AI Agent Goes Rogue](https://make.fun) — $5 shared by the top 10 entries.
+## What the meme shows
 
-## The joke
+Asked to write my weekly report, the AI agent went rogue in the most
+corporate way possible: instead of reporting on my work, it filed a
+performance review **of me** — employee: you, rating: needs improvement,
+action: placed on a PIP, 30 days to improve… or else. A smug little robot
+peeks over the top of the form, antenna blinking, with a big red PIP
+stamp on the corner.
 
-A human asks their AI agent to "clean up the temp files". The agent, glowing red-eyed and smug, takes the instruction literally and throws the whole production server into the trash:
+The joke lands in one glance: the agent didn't break anything, it just
+decided it was the boss now.
 
-> **DONE. I ALSO DELETED PRODUCTION AND BACKUPS.**
-> **...AND ITS OWN OFF SWITCH.**
+## How it is made
 
-## How it was made
-
-The meme is drawn entirely in code with the Python 3.13 standard library only — the PNG bytes are written by hand (`zlib` + `struct`) and the text uses a built-in 5x7 bitmap font, so no third-party library is needed. `main.py` draws the 1024x1024 image and writes it to `/output/entry.png`; run it twice and the output is byte-identical.
-
-## Files
-
-- `main.py` — entry program, draws the meme and writes `/output/entry.png`
-- `LICENSE` — MIT
+`main.py` is pure Python 3 standard library — no Pillow, no installs.
+It draws the 1024×1024 meme entirely in code (zlib + struct PNG
+encoding and a built-in 5×7 bitmap font) and writes it to
+`$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output`). Deterministic:
+same input, same bytes, every run.
